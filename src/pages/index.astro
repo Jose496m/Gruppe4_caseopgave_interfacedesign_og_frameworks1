@@ -59,14 +59,14 @@ import stock2 from "../assets/images/sammenhold.webp";
       </section>
     </div>
   </main>
-
-  <style>
-    .pierres_bereommelse {
-      background-color: #404040;
-    }
-    /*infoboks*/
-    @media (min-width: 600px) {
-      /*
+</BaseLayout>
+<style>
+  .pierres_bereommelse {
+    background-color: #404040;
+  }
+  /*infoboks*/
+  @media (min-width: 600px) {
+    /*
     .dropdown {
       display: flex;
     }
@@ -77,43 +77,42 @@ import stock2 from "../assets/images/sammenhold.webp";
       align-items: flex-start;
     }*/
 
-      .column {
-        flex: 1;
-        margin: 0 10px;
-      }
-      p {
-        margin-top: 5%;
-      }
-      .background {
-        background-color: #61788c;
-      }
+    .column {
+      flex: 1;
+      margin: 0 10px;
+    }
+    p {
+      margin-top: 5%;
+    }
+    .background {
+      background-color: #61788c;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .column {
+      margin: 10px 0;
     }
 
-    @media only screen and (max-width: 600px) {
-      .container {
-        flex-direction: column;
-        align-items: stretch;
-      }
-      .column {
-        margin: 10px 0;
-      }
-
-      .dropdown-header.active + .dropdown-content {
-        display: block;
-      }
-
-      .dropdown-content {
-        display: none;
-        padding: 10px;
-      }
-
-      .dropdown {
-        margin-top: 16%;
-        padding: 3%;
-        margin-bottom: 16%;
-        margin-left: 30px;
-      }
+    .dropdown-header.active + .dropdown-content {
+      display: block;
     }
-    /*infoboks*/
-  </style>
-</BaseLayout>
+
+    .dropdown-content {
+      display: none;
+      padding: 10px;
+    }
+
+    .dropdown {
+      margin-top: 16%;
+      padding: 3%;
+      margin-bottom: 16%;
+      margin-left: 30px;
+    }
+  }
+  /*infoboks*/
+</style>
