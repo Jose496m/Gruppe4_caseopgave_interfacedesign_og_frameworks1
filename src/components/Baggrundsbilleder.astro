@@ -1,14 +1,8 @@
 ---
-const { image, oversrift } = Astro.props;
+const { oversrift } = Astro.props;
 ---
 
 <section class="baggrund">
-  <img src={image} alt="" />
   <h2>{oversrift}</h2>
+  <slot />
 </section>
-
-<style>
-  h2 {
-    color: #fca21b;
-  }
-</style>
