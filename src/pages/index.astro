@@ -6,7 +6,7 @@ import Skillevej from "../components/Skillevej.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
 import pierresBer from "../assets/images/pierre.jpeg";
-//import skillevej from "../assets/images/.jpg";
+import skillevej from "../assets/images/skillevej.webp";
 //import begyndelse from "../assets/images/.jpg";
 ---
 
@@ -21,6 +21,9 @@ import pierresBer from "../assets/images/pierre.jpeg";
       </Baggrundsbilleder>
     </section>
     <section class="background">
+      <Baggrundsbilleder oversrift="En Skillevej">
+        <Image src={skillevej} alt="skillevej" />
+      </Baggrundsbilleder>
       <Skillevej
         title="En Skillevej"
         content="Pierre tjente godt det følgende årti. Men stille og roligt begyndte billederne også at give ham kvalme. Han kunne ikke holde sit eget arbejde ud, og måtte finde et modsvar til alle de blankpolerede fotos. Noget han kunne lave med stolthed. Pierre bestluttede sig for at droppe stock-fotos, og vende tilbage til rødderne."
