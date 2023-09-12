@@ -3,8 +3,8 @@ const { oversrift } = Astro.props;
 ---
 
 <section class="baggrund">
-  <h2>{oversrift}</h2>
   <slot />
+  <h2>{oversrift}</h2>
 </section>
 <style>
   section {
@@ -13,7 +13,6 @@ const { oversrift } = Astro.props;
   h2 {
     color: #fca21b;
     font-size: 7rem;
-    transform: translate(0, 350%);
     font-family: "Rubik Glitch", cursive;
   }
 </style>

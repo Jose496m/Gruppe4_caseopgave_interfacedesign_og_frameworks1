@@ -1,8 +1,15 @@
-h1{
-  font-family: 'Rubik Glitch', cursive;
+:root {
+  --bg: #404040;
+  --bg-color-2: #24323e;
+  --brand-color: #fca21b;
+  --brand-color-light: #ffb951;
+}
+h1 {
+  font-family: "Rubik Glitch", cursive;
+  text-align: center;
 }
 h2 {
-  font-family: 'Rubik Glitch', cursive;
+  text-align: center;
   color: #fca21b;
 }
 
