@@ -7,8 +7,13 @@ const { oversrift } = Astro.props;
   <slot />
 </section>
 <style>
+  section {
+    display: grid;
+  }
   h2 {
     color: #fca21b;
-    font-size: 8rem;
+    font-size: 7rem;
+    transform: translate(0, 350%);
+    font-family: "Rubik Glitch", cursive;
   }
 </style>
