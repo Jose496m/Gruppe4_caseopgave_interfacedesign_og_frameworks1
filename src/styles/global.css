@@ -1,5 +1,4 @@
 h2 {
-  font-size: var(--font-size-8);
   color: #fca21b;
 }
 
@@ -17,7 +16,7 @@ h3 {
 
 @media only screen and (max-width: 1200px) {
   h2 {
-    font-size: var(--font-size-7);
+    font-size: var(--size-11);
   }
 
   p {
