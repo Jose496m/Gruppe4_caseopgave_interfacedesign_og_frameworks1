@@ -1,12 +1,10 @@
 ---
-import { Image } from "astro:assets";
-import borderImg from "../assets/images/borderImg.svg"
+
 const { title } = Astro.props;
 ---
 
 <div class="grid_1-1">
   <h2 class="dropdown-header">{title}</h2>
-  <Image src={borderImg} alt="Apoteket" />
   <slot />
 </div>
 <style>
