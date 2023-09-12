@@ -2,32 +2,17 @@
 import Header from "../components/Header.astro";
 import Infoboks from "../components/Infoboks.astro";
 import Baggrundsbilleder from "../components/Baggrundsbilleder.astro";
-import Tekstboks from "../components/Tekstboks.astro";
-import TekstTyk from "../components/TekstTyk.astro";
 import Skillevej from "../components/Skillevej.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
-import pierresBer from "../assets/images/pierre.webp";
 import skillevej from "../assets/images/skillevej.webp";
-import stock1 from "../assets/images/apoteket.webp";
-import stock2 from "../assets/images/sammenhold.webp";
+
 //import begyndelse from "../assets/images/.jpg";
 ---
 
 <BaseLayout>
   <main>
     <Header />
-    <section class="pierres_bereommelse">
-      <Baggrundsbilleder oversrift="Pierres berømmelse">
-        <Image class="img" src={pierresBer} alt="afsnit Pierres Berømmelse" />
-      </Baggrundsbilleder>
-      <Tekstboks text="Pierres interesse for foto startede som ganske ung - som 10-årig fik han sin fars gamle Rollei-kamera, og begyndte at skyde løs. Det var før den digitale revolution, så alle Pierres lommepenge blev brugt på filmruller og fremkaldelse af film. Pierre fortsatte med at fotografere på film op gennem gymnasietiden." />
-      <Tekstboks text="Pierre over til digital fotografering i starten af 2000’erne, da han begyndte at studere fotografisk kommunikation på DMJX. Her åbnede en ny verden sig: " />
-      <TekstTyk text="Reklamefotografering i studie, lyssætning og manipulering af billeder i Photoshop blev hans nye stil. " />
-      <Image src={stock1} alt="Apoteket" />
-      <Image src={stock2} alt="Sammenhold" />
-      <Tekstboks text="På det tidspunkt var stock-foto industrien i starten af en revolution: De første online stock-foto websites begyndte at komme på markedet, men de store, etablerede spillere på markedet holdt lidt igen. " />
-    </section>
     <section>
       <Baggrundsbilleder oversrift="En Skillevej">
         <Image src={skillevej} alt="skillevej" />
