@@ -3,18 +3,20 @@ const { text } = Astro.props;
 ---
 
 <section>
-  <p class="tekstboks">{text}</p>
+  <p class="tekstboks2">{text}</p>
 </section>
 
 <style>
   section {
     padding-block: var(--size-8);
-    padding-inline: var(--size-14);
+    padding-inline: var(--size-12);
   }
-  .tekstboks {
+  .tekstboks2 {
     color: var(--brand-color);
-    font-size: var(--font-size-2);
+    font-size: var(--font-size-4);
+    font-weight: 600;
     font-style: normal;
     font-family: "Rubik", cursive;
+    text-align: center;
   }
 </style>
