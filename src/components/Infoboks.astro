@@ -4,14 +4,13 @@ const { title } = Astro.props;
 
 <div class="grid_1-1">
   <h2 class="dropdown-header">{title}</h2>
-
-  <script src="../scripts/dropdown.js"></script>
-
+  <img src={borderImg} alt="">
   <slot />
 </div>
 <style>
   .grid_1-1 {
     display: grid;
+    border-image: url("infoboxBorder.svg");
   }
   .dropdown-header {
     cursor: pointer;
