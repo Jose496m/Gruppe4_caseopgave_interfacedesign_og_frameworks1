@@ -1,14 +1,46 @@
 ---
-const { content } = Astro.props;
+import Tekstboks from "./Tekstboks.astro";
+import TekstTyk from "./TekstTyk.astro";
+import { Image } from "astro:assets";
+import skillevej from "../assets/images/skillevej.webp";
+import Baggrundsbilleder from "./Baggrundsbilleder.astro";
+import skillevej1 from "../assets/images/skillevej1.webp";
+import skillevej2 from "../assets/images/skillevej2.webp";
+import skillevej3 from "../assets/images/skillevej3.webp";
 ---
 
-<p>{content}</p>
+<section>
+  <Baggrundsbilleder oversrift="En Skillevej" class="overskrift">
+    <Image src={skillevej} alt="skillevej" class="skillevej" />
+  </Baggrundsbilleder>
+
+  <Tekstboks
+    text="Pierre tjente godt det følgende årti. Men stille og roligt begyndte billederne også at give ham kvalme. Han kunne ikke holde sit eget arbejde ud, og måtte finde et modsvar til alle de blankpolerede fotos. Noget han kunne lave med stolthed"
+  />
+  <TekstTyk
+    text="Pierre besluttede sig for at droppe stock-fotos, og vende tilbage til rødderne."
+  />
+  <Image class="img1" src={skillevej1} alt="1" />
+  <Tekstboks
+    text="Han søgte inspiration i analog fotografering, i Lomo-bevægelsen, Glitch art og polaroid fotografering, og begyndte stille og roligt at skabe sig en ny stil - en stil med fokus på det uperfekte, og hvor der er et uforudsigeligt element i det at tage billeder."
+  />
+  <Image class="img2" src={skillevej2} alt="2" />
+  <Tekstboks
+    text="Pierre tog det endda så vidt at han ikke kun droppede at tage stock-fotos. Han fjernede også alle stock-fotos fra de tjenester, han solgte sine fotos hos. Han gik fra at være en god forretningsdrivende til at blive en vaskeægte boheme-type på rekordtid"
+  />
+</section>
 
 <style>
-  p {
-    text-align: left;
-    max-width: 500px;
-    margin-left: 36%;
-    color: var(--gray-2);
+  .skillevej {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .img1,
+  .img2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>
