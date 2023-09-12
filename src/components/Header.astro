@@ -1,0 +1,52 @@
+<div class="layout">
+  <video autoplay loop muted src="/header.mp4"></video>
+  <h1>UPERFEKT ER PERFEKT</h1>
+</div>
+
+<style>
+  @font-face {
+    font-family: "Grandstander";
+  }
+  h1,
+  video {
+    grid-area: 1/1;
+  }
+  h1 {
+    color: var(--orange-5);
+    font-family: "Grandstander";
+    font-size: var(--size-10);
+    place-self: center center;
+  }
+
+  .layout {
+    display: grid;
+  }
+
+  video {
+    overflow: hidden;
+  }
+
+  @media (max-width: 800px) {
+    @font-face {
+      font-family: "Grandstander";
+    }
+    h1,
+    video {
+      grid-area: 1/1;
+    }
+    h1 {
+      color: var(--orange-5);
+      font-family: "Grandstander";
+      font-size: var(--size-7);
+      place-self: center center;
+    }
+
+    .layout {
+      display: grid;
+    }
+
+    video {
+      overflow: hidden;
+    }
+  }
+</style>

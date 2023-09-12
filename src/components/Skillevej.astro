@@ -1,0 +1,26 @@
+---
+const { content } = Astro.props;
+---
+
+<p>{content}</p>
+
+<div class="layout">
+  <img src="../assets/images/skillevej.webp" />
+  <h4>En skillevej</h4>
+</div>
+
+<style>
+  h4 {
+    text-align: center;
+    font-size: var(--font-size-6);
+    color: #fca21b;
+    font-family: "gothic", sans-serif;
+    font-weight: 700;
+  }
+  p {
+    text-align: left;
+    max-width: 500px;
+    margin-left: 36%;
+    color: var(--gray-2);
+  }
+</style>

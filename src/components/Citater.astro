@@ -1,0 +1,21 @@
+---
+const { text } = Astro.props;
+---
+
+<section>
+  <p class="citat">{text}</p>
+</section>
+
+<style>
+  section {
+    padding-block: var(--size-7);
+    padding-inline: var(--size-3);
+  }
+  .citat {
+    font-size: var(--font-size-4);
+    color: #fca21b;
+    font-family: "futura-pt-bold", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+</style>
