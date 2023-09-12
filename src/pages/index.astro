@@ -6,13 +6,14 @@ import Skillevej from "../components/Skillevej.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
 import skillevej from "../assets/images/skillevej.webp";
-
+import PierresBereommelse from "../components/PierresBereommelse.astro";
 //import begyndelse from "../assets/images/.jpg";
 ---
 
 <BaseLayout>
   <main>
     <Header />
+    <PierresBereommelse />
     <section>
       <Baggrundsbilleder oversrift="En Skillevej">
         <Image src={skillevej} alt="skillevej" />
