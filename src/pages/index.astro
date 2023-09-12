@@ -7,6 +7,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
 import skillevej from "../assets/images/skillevej.webp";
 import PierresBereommelse from "../components/PierresBereommelse.astro";
+import infoboxBorder from "../assets/images/infoboxBorder.svg";
 //import begyndelse from "../assets/images/.jpg";
 ---
 
@@ -30,6 +31,7 @@ import PierresBereommelse from "../components/PierresBereommelse.astro";
         <div>
           <Infoboks title="Analog fotografering">
             <p>Fotografering med gode, gammeldags filmruller. Analog fotografering stiger for tiden i popularitet, specielt blandt unge, og prisen på filmruller og vintage-kameraer skyder i vejret. Mange fotografer synes at film-fotografering er mere ægte har mere “sjæl.” Analog fotografering er langsommmere, hvert enkelt billede koster penge, og man bliver nødt til at overveje motiv og lys grundigere før der skydes - tænk før du trykker.</p>
+         <Image src={infoboxBorder} alt="linje" />
           </Infoboks>
         </div>
         <div>
