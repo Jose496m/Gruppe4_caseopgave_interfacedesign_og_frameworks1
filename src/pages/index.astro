@@ -17,7 +17,7 @@ import skillevej from "../assets/images/skillevej.webp";
     <Header />
     <section class="pierres_bereommelse">
       <Baggrundsbilleder oversrift="Pierres berømmelse">
-        <Image src={pierresBer} alt="afsnit Pierres Berømmelse" />
+        <Image class="img" src={pierresBer} alt="afsnit Pierres Berømmelse" />
       </Baggrundsbilleder>
     </section>
     <section class="background">
@@ -79,6 +79,9 @@ import skillevej from "../assets/images/skillevej.webp";
 </body>
 
 <style>
+  .img {
+    height: 100%;
+  }
   /*infoboks*/
   @media (min-width: 600px) {
     .pic1 {
