@@ -1,13 +1,11 @@
 ---
 import Header from "../components/Header.astro";
 import Infoboks from "../components/Infoboks.astro";
-import Baggrundsbilleder from "../components/Baggrundsbilleder.astro";
 import Skillevej from "../components/Skillevej.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { Image } from "astro:assets";
-import skillevej from "../assets/images/skillevej.webp";
 import PierresBereommelse from "../components/PierresBereommelse.astro";
 import infoboxBorder from "../assets/images/infoboxBorder.svg";
+import NyBegyndelse from "../components/Nybegyndelse.astro";
 //import begyndelse from "../assets/images/.jpg";
 ---
 
@@ -15,6 +13,7 @@ import infoboxBorder from "../assets/images/infoboxBorder.svg";
   <main>
     <Header />
     <PierresBereommelse />
+<<<<<<< HEAD
     <section>
       <Baggrundsbilleder oversrift="En Skillevej">
         <Image src={skillevej} alt="skillevej" />
@@ -71,6 +70,30 @@ import infoboxBorder from "../assets/images/infoboxBorder.svg";
       </Infoboks>
     </div>
     </section>
+=======
+    <Skillevej />
+
+    <div class="container">
+      <section class="dropdown">
+        <div class="infoboxDiv">
+          <Infoboks title="Analog fotografering">
+            <p class="orange">Fotografering med gode, gammeldags filmruller. Analog fotografering stiger for tiden i popularitet, specielt blandt unge, og prisen på filmruller og vintage-kameraer skyder i vejret. Mange fotografer synes at film-fotografering er mere ægte har mere “sjæl.” Analog fotografering er langsommmere, hvert enkelt billede koster penge, og man bliver nødt til at overveje motiv og lys grundigere før der skydes - tænk før du trykker.</p>
+          </Infoboks>
+        </div>
+        <div>
+          <Infoboks title="Glitch Art">
+            <p>Når der sker en teknisk fejl i et medie/en kommunikationskanal kaldes det en glitch. Glitch art går ud på at dyrke fejlene for at skabe kunst. En meget typisk glitch er små analoge eller digitale fejl i farvegengivelsen af billeder.</p>
+          </Infoboks>
+        </div>
+        <div>
+          <Infoboks title="Lomografi">
+            <p>Et lomografi er egentlig bare et fotografi skudt uden videre omtankte, og med noget foto-udstyr af ret alternativ kvalitet.Lomografier skydes ofte på gode, gammeldags filmruller, men kan også skyde digitalt. Det kan måske lyde lidt anti-fotograf-agtigt. men en del foto-entusiaster dyrker den slags, og ser det som en foto-genre eller endda en livsstil.</p>
+          </Infoboks>
+        </div>
+      </section>
+    </div>
+    <NyBegyndelse />
+>>>>>>> f58acdb59fc42cbc94478401905d14890f9f1473
   </main>
 </BaseLayout>
 
@@ -79,6 +102,7 @@ import infoboxBorder from "../assets/images/infoboxBorder.svg";
     background-color: #404040;
   }
   /*infoboks*/
+<<<<<<< HEAD
   .AnalogFotografering{
     display: flex;
     justify-content: center;
@@ -102,5 +126,11 @@ import infoboxBorder from "../assets/images/infoboxBorder.svg";
     align-items: center;
     gap: var(--size-3);
   }
+=======
+  .infoboxDiv {
+    display: grid;
+  }
+
+>>>>>>> f58acdb59fc42cbc94478401905d14890f9f1473
   /*infoboks*/
 </style>

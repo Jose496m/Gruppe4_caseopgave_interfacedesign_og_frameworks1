@@ -4,18 +4,20 @@ const { text } = Astro.props;
 
 <section>
   <p class="citat">{text}</p>
+  <p class="citat">- Pierre</p>
 </section>
 
 <style>
   section {
-    padding-block: var(--size-7);
-    padding-inline: var(--size-3);
+    padding-block: var(--size-8);
+    padding-inline: var(--size-10);
   }
   .citat {
-    font-size: var(--font-size-4);
+    font-size: var(--font-size-5);
     color: #fca21b;
     font-family: "futura-pt-bold", sans-serif;
     font-weight: 700;
     font-style: italic;
+    text-align: center;
   }
 </style>
