@@ -1,12 +1,60 @@
-<div class="layout">
+<div class="layout video-container">
   <video autoplay loop muted src="/header1.mp4"></video>
   <h1>UPERFEKT ER PERFEKT</h1>
 </div>
+<div class="text-container">
+  <p>
+    Pierre Falcke. Du ved formentligt ikke hvem han er. Men indtil for kort tid
+    siden, så du hans værker et par gange om dagen, hver dag, året rundt.
+  </p>
+</div>
+<div class="text-container2">
+  <p>
+    Pierre Falcke var en af verdens bedst sælgende stock-fotografer, og han
+    solgte over 2 millioner fotos om året. Men Pierre kunne ikke drømme om at
+    bruge sine egne fotos - faktisk kan han ikke fordrage sit eget arbejde.
+  </p>
+</div>
 
 <style>
+  body,
+  html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    color: var(--brand-color);
+    width: 500px;
+  }
+
+  .video-container {
+    background-size: cover;
+    background-attachment: fixed; /* Dette er vigtigt for parallax-effekten */
+    height: 100vh; /* Skal udfylde hele skærmen */
+    overflow: hidden; /* Skjul eventuel overflow fra teksten */
+    position: relative;
+  }
+
+  .text-container {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .text-container2 {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   @font-face {
     font-family: "Grandstander";
   }
+
   h1,
   video {
     grid-area: 1/1;
