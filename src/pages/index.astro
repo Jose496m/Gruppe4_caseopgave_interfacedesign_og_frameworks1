@@ -32,7 +32,7 @@ import NyBegyndelse from "../components/Nybegyndelse.astro";
         </div>
         <div>
           <Infoboks title="Glitch Art">
-            <p>
+            <p class="orange">
               Når der sker en teknisk fejl i et medie/en kommunikationskanal
               kaldes det en glitch. Glitch art går ud på at dyrke fejlene for at
               skabe kunst. En meget typisk glitch er små analoge eller digitale
@@ -42,7 +42,7 @@ import NyBegyndelse from "../components/Nybegyndelse.astro";
         </div>
         <div>
           <Infoboks title="Lomografi">
-            <p>
+            <p class="orange">
               Et lomografi er egentlig bare et fotografi skudt uden videre
               omtankte, og med noget foto-udstyr af ret alternativ
               kvalitet.Lomografier skydes ofte på gode, gammeldags filmruller,
@@ -65,6 +65,9 @@ import NyBegyndelse from "../components/Nybegyndelse.astro";
   /*infoboks*/
   .infoboxDiv {
     display: grid;
+    border-image: url("../assets/images/infoboxBorder.svg") 20% round;
+    border: 15px solid transparent;
+    padding: 15px;
   }
 
   /*infoboks*/
