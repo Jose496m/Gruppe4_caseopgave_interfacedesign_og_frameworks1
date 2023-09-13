@@ -19,4 +19,10 @@ const { text } = Astro.props;
     font-family: "Rubik", cursive;
     text-align: center;
   }
+  @media only screen and (max-width: 600px) {
+    section {
+      padding-block: var(--size-4);
+      padding-inline: var(--size-4);
+    }
+  }
 </style>
