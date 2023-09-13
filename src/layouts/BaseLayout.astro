@@ -1,5 +1,5 @@
 ---
-import "../styles/global.css"; 
+import "../styles/global.css";
 import "../styles/reset.css";
 ---
 
@@ -21,7 +21,7 @@ import "../styles/reset.css";
   </body>
 </html>
 <style>
-  body{
+  body {
     background-color: var(--gray-7);
   }
 </style>
@@ -31,5 +31,16 @@ import "../styles/reset.css";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
 
   gsap.registerPlugin(ScrollTrigger);
-  
-  </script>
+  gsap.from(".text", {
+    duration: 1,
+    opacity: 0,
+    scrollTrigger: {
+      trigger: ".text",
+      start: "top center", // Starter, når toppen af elementet når midten af visningen
+      end: "bottom center",
+      scrub: true, // Gør animationen flydende med scrolling
+      markers: true,
+      toggleClass: "fade-in-bottom",
+    },
+  });
+</script>
