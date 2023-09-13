@@ -7,14 +7,30 @@ const { text } = Astro.props;
 </section>
 
 <style>
+  p {
+    color: var(--brand-color);
+  }
   section {
     padding-block: var(--size-10);
     padding-inline: var(--size-14);
   }
-  .tekstboks {
-    color: var(--brand-color);
-    font-size: var(--font-size-2);
-    font-style: normal;
-    font-family: "Rubik", cursive;
+  @media only screen and (max-width: 900px) {
+    section {
+      padding-block: var(--size-6);
+      padding-inline: var(--size-8);
+    }
+    .tekstboks {
+      color: var(--brand-color);
+      font-size: var(--font-size-2);
+      font-style: normal;
+      font-family: "Rubik", cursive;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    section {
+      padding-block: var(--size-4);
+      padding-inline: var(--size-4);
+    }
   }
 </style>
