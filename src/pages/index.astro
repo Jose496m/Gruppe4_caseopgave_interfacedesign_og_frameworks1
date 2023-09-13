@@ -38,8 +38,8 @@ import NyBegyndelse from "../components/Nybegyndelse.astro";
 
     <div class="container">
       <section class="dropdown">
-        <div class="infoboxDiv">
-          <Infoboks title="Analog fotografering">
+        <div class="infoboxDiv1">
+          <Infoboks title="Analog fotografering" >
             <p class="orange">
               Fotografering med gode, gammeldags filmruller. Analog
               fotografering stiger for tiden i popularitet, specielt blandt
@@ -51,7 +51,7 @@ import NyBegyndelse from "../components/Nybegyndelse.astro";
             </p>
           </Infoboks>
         </div>
-        <div>
+        <div class="infoboxDiv2">
           <Infoboks title="Glitch Art">
             <p class="orange">
               Når der sker en teknisk fejl i et medie/en kommunikationskanal
@@ -61,7 +61,7 @@ import NyBegyndelse from "../components/Nybegyndelse.astro";
             </p>
           </Infoboks>
         </div>
-        <div>
+        <div class="infoboxDiv3">
           <Infoboks title="Lomografi">
             <p class="orange">
               Et lomografi er egentlig bare et fotografi skudt uden videre
@@ -84,8 +84,21 @@ import NyBegyndelse from "../components/Nybegyndelse.astro";
     background-color: #404040;
   }
   /*infoboks*/
-  .infoboxDiv {
+  .infoboxDiv1 {
     display: grid;
+    background-image: url(../assets/images/analog.webp);
+    justify-items: center
+  }
+
+  .infoboxDiv2 {
+    display: grid;
+    background-image: url(../assets/images/glitch.webp);
+    justify-items: center
+  }
+  .infoboxDiv3 {
+    display: grid;
+    background-image: url(../assets/images/lomografi.webp);
+    justify-items: center
   }
 
   /*infoboks*/
