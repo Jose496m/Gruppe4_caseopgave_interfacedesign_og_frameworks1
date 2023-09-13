@@ -13,87 +13,48 @@ import NyBegyndelse from "../components/Nybegyndelse.astro";
   <main>
     <Header />
     <PierresBereommelse />
-<<<<<<< HEAD
-    <section>
-      <Baggrundsbilleder oversrift="En Skillevej">
-        <Image src={skillevej} alt="skillevej" />
-      </Baggrundsbilleder>
-    </section>
-    <section class="background">
-      <Skillevej
-        title="En Skillevej"
-        content="Pierre tjente godt det følgende årti. Men stille og roligt begyndte billederne også at give ham kvalme. Han kunne ikke holde sit eget arbejde ud, og måtte finde et modsvar til alle de blankpolerede fotos. Noget han kunne lave med stolthed. Pierre bestluttede sig for at droppe stock-fotos, og vende tilbage til rødderne."
-      />
-
-      <Skillevej
-        content="Han søgte inspiration i analog fotografering, i Lomo-bevægelsen, Glitch art og polaroid fotografering, og begyndte stille og roligt at skabe sig en ny stil - en stil med fokus på det uperfekte, og hvor der er et uforudsigeligt element i det at tage billeder."
-      />
-      <Skillevej
-        content="Pierre tog det endda så vidt at han ikke kun droppede at tage stock-fotos. Han fjernede også alle stock-fotos fra de tjenester, han solgte sine fotos hos. Han gik fra at være en god forretningsdrivende til at blive en vaskeægte boheme-type på rekordtid."
-      />
-    </section>
-
-    <section class="infoboks1">
-      <div class="AnalogFotografering">
-      <Infoboks title="Analog fotografering">
-        <p class="white">  Fotografering med gode, gammeldags filmruller. Analog fotografering
-          stiger for tiden i popularitet, specielt blandt unge, og prisen på
-          filmruller og vintage-kameraer skyder i vejret. Mange fotografer synes
-          at film-fotografering er mere ægte har mere “sjæl.” Analog fotografering
-          er langsommmere, hvert enkelt billede koster penge, og man bliver nødt
-          til at overveje motiv og lys grundigere før der skydes - tænk før du
-          trykker.</p>
-      
-      </Infoboks>
-    </div>
-
-<div class="glitchArt">
-      <Infoboks title="Glitch Art">
-        <p class="white">
-          Når der sker en teknisk fejl i et medie/en kommunikationskanal kaldes
-          det en glitch. Glitch art går ud på at dyrke fejlene for at skabe
-          kunst. En meget typisk glitch er små analoge eller digitale fejl i
-          farvegengivelsen af billeder.
-        </p>
-      </Infoboks>
-    </div>
-    <div class="lomografi">
-      <Infoboks title="Lomografi">
-        <p class="orange">
-          Et lomografi er egentlig bare et fotografi skudt uden videre omtankte,
-          og med noget foto-udstyr af ret alternativ kvalitet.Lomografier skydes
-          ofte på gode, gammeldags filmruller, men kan også skyde digitalt. Det
-          kan måske lyde lidt anti-fotograf-agtigt. men en del foto-entusiaster
-          dyrker den slags, og ser det som en foto-genre eller endda en
-          livsstil.
-        </p>
-      </Infoboks>
-    </div>
-    </section>
-=======
     <Skillevej />
 
     <div class="container">
       <section class="dropdown">
         <div class="infoboxDiv">
           <Infoboks title="Analog fotografering">
-            <p class="orange">Fotografering med gode, gammeldags filmruller. Analog fotografering stiger for tiden i popularitet, specielt blandt unge, og prisen på filmruller og vintage-kameraer skyder i vejret. Mange fotografer synes at film-fotografering er mere ægte har mere “sjæl.” Analog fotografering er langsommmere, hvert enkelt billede koster penge, og man bliver nødt til at overveje motiv og lys grundigere før der skydes - tænk før du trykker.</p>
+            <p class="orange">
+              Fotografering med gode, gammeldags filmruller. Analog
+              fotografering stiger for tiden i popularitet, specielt blandt
+              unge, og prisen på filmruller og vintage-kameraer skyder i vejret.
+              Mange fotografer synes at film-fotografering er mere ægte har mere
+              “sjæl.” Analog fotografering er langsommmere, hvert enkelt billede
+              koster penge, og man bliver nødt til at overveje motiv og lys
+              grundigere før der skydes - tænk før du trykker.
+            </p>
           </Infoboks>
         </div>
         <div>
           <Infoboks title="Glitch Art">
-            <p>Når der sker en teknisk fejl i et medie/en kommunikationskanal kaldes det en glitch. Glitch art går ud på at dyrke fejlene for at skabe kunst. En meget typisk glitch er små analoge eller digitale fejl i farvegengivelsen af billeder.</p>
+            <p>
+              Når der sker en teknisk fejl i et medie/en kommunikationskanal
+              kaldes det en glitch. Glitch art går ud på at dyrke fejlene for at
+              skabe kunst. En meget typisk glitch er små analoge eller digitale
+              fejl i farvegengivelsen af billeder.
+            </p>
           </Infoboks>
         </div>
         <div>
           <Infoboks title="Lomografi">
-            <p>Et lomografi er egentlig bare et fotografi skudt uden videre omtankte, og med noget foto-udstyr af ret alternativ kvalitet.Lomografier skydes ofte på gode, gammeldags filmruller, men kan også skyde digitalt. Det kan måske lyde lidt anti-fotograf-agtigt. men en del foto-entusiaster dyrker den slags, og ser det som en foto-genre eller endda en livsstil.</p>
+            <p>
+              Et lomografi er egentlig bare et fotografi skudt uden videre
+              omtankte, og med noget foto-udstyr af ret alternativ
+              kvalitet.Lomografier skydes ofte på gode, gammeldags filmruller,
+              men kan også skyde digitalt. Det kan måske lyde lidt
+              anti-fotograf-agtigt. men en del foto-entusiaster dyrker den
+              slags, og ser det som en foto-genre eller endda en livsstil.
+            </p>
           </Infoboks>
         </div>
       </section>
     </div>
     <NyBegyndelse />
->>>>>>> f58acdb59fc42cbc94478401905d14890f9f1473
   </main>
 </BaseLayout>
 
@@ -102,35 +63,9 @@ import NyBegyndelse from "../components/Nybegyndelse.astro";
     background-color: #404040;
   }
   /*infoboks*/
-<<<<<<< HEAD
-  .AnalogFotografering{
-    display: flex;
-    justify-content: center;
-    border:var(--border-size-1) solid var(--gray-0);
-  max-width: 600px;}
-  .lomografi{
-    display: flex;
-    justify-content: center;
-    border:var(--border-size-1) solid var(--gray-0);
-  max-width: 600px;
-  }
-  .glitchArt{
-    display: flex;
-    justify-content: center;
-    border:var(--border-size-1) solid var(--gray-0);
-  max-width: 600px;
-  }
-  .infoboks1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--size-3);
-  }
-=======
   .infoboxDiv {
     display: grid;
   }
 
->>>>>>> f58acdb59fc42cbc94478401905d14890f9f1473
   /*infoboks*/
 </style>
