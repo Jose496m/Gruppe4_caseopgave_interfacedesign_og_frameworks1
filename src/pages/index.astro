@@ -12,13 +12,34 @@ import NyBegyndelse from "../components/Nybegyndelse.astro";
 <BaseLayout>
   <main>
     <Header />
+
+    <Infoboks title="Stock-fotos">
+      <p class="white">
+        Stock-fotos er billeder, der kan købes fra et foto-website. De bruges af
+        aviser, til markedsføring og som indhold på websites. En licens til at
+        bruge et foto koster typisk mellem 10 og 100 kroner, alt afhængig af
+        hvad de skal bruges til.
+      </p>
+      <p class="white">
+        Stock-fotos bliver ofte kritiseret for at være uden sjæl - det er de der
+        billeder af en læge i hvid kittel med stetoskop om halsen på en meget
+        hvid baggrund eller en meget glad dame fra virksomhedens salgs- eller
+        supportafdeling.
+      </p>
+      <p class="white">
+        Stock-fotos har eksisteret i mange år. Før branchen blev digital, tilbød
+        stock-foto virksomhederne billedmapper, der kunne bestilles fra. Men
+        stock-foto branchen var én af de tidlige til at blive fuldt
+        digitaliseret.
+      </p>
+    </Infoboks>
     <PierresBereommelse />
     <Skillevej />
 
     <div class="container">
       <section class="dropdown">
-        <div class="infoboxDiv">
-          <Infoboks title="Analog fotografering">
+        <div class="infoboxDiv1">
+          <Infoboks title="Analog fotografering" >
             <p class="orange">
               Fotografering med gode, gammeldags filmruller. Analog
               fotografering stiger for tiden i popularitet, specielt blandt
@@ -30,7 +51,7 @@ import NyBegyndelse from "../components/Nybegyndelse.astro";
             </p>
           </Infoboks>
         </div>
-        <div>
+        <div class="infoboxDiv2">
           <Infoboks title="Glitch Art">
             <p class="orange">
               Når der sker en teknisk fejl i et medie/en kommunikationskanal
@@ -40,7 +61,7 @@ import NyBegyndelse from "../components/Nybegyndelse.astro";
             </p>
           </Infoboks>
         </div>
-        <div>
+        <div class="infoboxDiv3">
           <Infoboks title="Lomografi">
             <p class="orange">
               Et lomografi er egentlig bare et fotografi skudt uden videre
@@ -63,9 +84,25 @@ import NyBegyndelse from "../components/Nybegyndelse.astro";
     background-color: #404040;
   }
   /*infoboks*/
-  .infoboxDiv {
+  .infoboxDiv1 {
     display: grid;
-   
+    max-width: ;
+    background-image: url(../assets/images/analog.webp);
+    justify-items: center
+  }
+
+  .infoboxDiv2 {
+    display: grid;
+    background-image: url(../assets/images/glitch.webp);
+    justify-items: center
+  }
+  .infoboxDiv3 {
+    display: grid;
+    background-image: url(../assets/images/lomografi.webp);
+    justify-items: center;
+    border: 5px solid transparent;
+    border-image: url(../assets/images/borderLine.png) 4% stretch;
+
   }
 
   /*infoboks*/
