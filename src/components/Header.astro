@@ -21,21 +21,15 @@
   import { ScrollTrigger } from "gsap/ScrollTrigger";
 
   gsap.registerPlugin(ScrollTrigger);
-
   gsap.to(".video1", {
-    duration: 5,
+    duration: 2,
     scrollTrigger: {
       trigger: ".video1",
-      start: "top center ",
-      end: "top center",
-      scrub: 4,
-      toggleActions: "restart none none none",
       pin: true,
       //markers: true,
     },
   });
 
-  gsap.registerPlugin(ScrollTrigger);
   gsap.from(".scroll", {
     scrollTrigger: {
       trigger: ".scroll",
