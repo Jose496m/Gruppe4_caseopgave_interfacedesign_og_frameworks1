@@ -24,14 +24,13 @@ body {
   min-block-size: 100%;
 }
 
-/* img,
+img,
 picture,
-video,
 svg {
   display: block;
   max-width: 100%;
   height: auto;
-} */
+} 
 
 input,
 button,
