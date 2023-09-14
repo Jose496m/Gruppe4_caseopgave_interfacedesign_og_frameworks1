@@ -5,8 +5,7 @@ import Skillevej from "../components/Skillevej.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PierresBereommelse from "../components/PierresBereommelse.astro";
 import infoboxBorder from "../assets/images/infoboxBorder.svg";
-import NyBegyndelse from "../components/Nybegyndelse.astro";
-//import begyndelse from "../assets/images/.jpg";
+import Begyndelse from "../components/Begyndelse.astro";
 ---
 
 <BaseLayout>
@@ -39,7 +38,7 @@ import NyBegyndelse from "../components/Nybegyndelse.astro";
     <div class="container">
       <section class="dropdown">
         <div class="infoboxDiv1">
-          <Infoboks title="Analog fotografering" >
+          <Infoboks title="Analog fotografering">
             <p class="orange">
               Fotografering med gode, gammeldags filmruller. Analog
               fotografering stiger for tiden i popularitet, specielt blandt
@@ -75,7 +74,7 @@ import NyBegyndelse from "../components/Nybegyndelse.astro";
         </div>
       </section>
     </div>
-    <NyBegyndelse />
+    <Begyndelse />
   </main>
 </BaseLayout>
 
@@ -88,13 +87,13 @@ import NyBegyndelse from "../components/Nybegyndelse.astro";
     display: grid;
     max-width: ;
     background-image: url(../assets/images/analog.webp);
-    justify-items: center
+    justify-items: center;
   }
 
   .infoboxDiv2 {
     display: grid;
     background-image: url(../assets/images/glitch.webp);
-    justify-items: center
+    justify-items: center;
   }
   .infoboxDiv3 {
     display: grid;
@@ -102,7 +101,6 @@ import NyBegyndelse from "../components/Nybegyndelse.astro";
     justify-items: center;
     border: 8px solid transparent;
     border-image: url(../assets/images/borderLine.png) 5% stretch;
-
   }
 
   /*infoboks*/
