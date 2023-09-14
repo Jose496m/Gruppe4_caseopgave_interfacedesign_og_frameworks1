@@ -1,77 +1,84 @@
 ---
-
 const { title } = Astro.props;
-const {infotekst} = Astro.props;
-
+const { infotekst } = Astro.props;
 ---
 
+<div class="infoboxDiv1">
+  <div class="grid_1-1" id="analog">
+    <h3>Analog fotografering</h3>
+    <p class="orange">
+      Fotografering med gode, gammeldags filmruller. Analog fotografering stiger
+      for tiden i popularitet, specielt blandt unge, og prisen på filmruller og
+      vintage-kameraer skyder i vejret. Mange fotografer synes at
+      film-fotografering er mere ægte har mere “sjæl.” Analog fotografering er
+      langsommmere, hvert enkelt billede koster penge, og man bliver nødt til at
+      overveje motiv og lys grundigere før der skydes - tænk før du trykker.
+    </p>
+  </div>
+</div>
 
-    <div class="infoboxDiv1">
-      <div class="grid_1-1">
-        <h3> Analog fotografering</h3>
-        <p class="orange">
-          Fotografering med gode, gammeldags filmruller. Analog
-          fotografering stiger for tiden i popularitet, specielt blandt
-          unge, og prisen på filmruller og vintage-kameraer skyder i vejret.
-          Mange fotografer synes at film-fotografering er mere ægte har mere
-          “sjæl.” Analog fotografering er langsommmere, hvert enkelt billede
-          koster penge, og man bliver nødt til at overveje motiv og lys
-          grundigere før der skydes - tænk før du trykker.
-        </p>
-      </div>
-    </div>
+<div class="infoboxDiv2">
+  <div class="grid_1-1" id="glitch">
+    <h3>Glitch Art</h3>
+    <p class="orange">
+      Når der sker en teknisk fejl i et medie/en kommunikationskanal kaldes det
+      en glitch. Glitch art går ud på at dyrke fejlene for at skabe kunst. En
+      meget typisk glitch er små analoge eller digitale fejl i farvegengivelsen
+      af billeder.
+    </p>
+  </div>
+</div>
 
-    <div class="infoboxDiv2">
-      <div class="grid_1-1" id="glitch">
-      <h3>Glitch Art</h3>
-        <p class="orange">
-          Når der sker en teknisk fejl i et medie/en kommunikationskanal
-          kaldes det en glitch. Glitch art går ud på at dyrke fejlene for at
-          skabe kunst. En meget typisk glitch er små analoge eller digitale
-          fejl i farvegengivelsen af billeder.
-        </p>
-      </div>
-    </div>
-
-    <div class="infoboxDiv3">
-      <div class="grid_1-1" id="lomografi">
-      <h3>Lomografi</h3>
-        <p class="orange">
-          Et lomografi er egentlig bare et fotografi skudt uden videre
-          omtankte, og med noget foto-udstyr af ret alternativ
-          kvalitet.Lomografier skydes ofte på gode, gammeldags filmruller,
-          men kan også skyde digitalt. Det kan måske lyde lidt
-          anti-fotograf-agtigt. men en del foto-entusiaster dyrker den
-          slags, og ser det som en foto-genre eller endda en livsstil.
-        </p>
-      </div>
-    </div>
-
-
+<div class="infoboxDiv3">
+  <div class="grid_1-1" id="lomografi">
+    <h3>Lomografi</h3>
+    <p class="orange">
+      Et lomografi er egentlig bare et fotografi skudt uden videre omtankte, og
+      med noget foto-udstyr af ret alternativ kvalitet.Lomografier skydes ofte
+      på gode, gammeldags filmruller, men kan også skyde digitalt. Det kan måske
+      lyde lidt anti-fotograf-agtigt. men en del foto-entusiaster dyrker den
+      slags, og ser det som en foto-genre eller endda en livsstil.
+    </p>
+  </div>
+</div>
 
 <style>
   .grid_1-1 {
     display: flex;
- flex-direction: column;
-width: 70%;
-max-width: 600px;
- padding: var(--size-6); 
- justify-items: center;
+    flex-direction: column;
+    width: 70%;
+    max-width: 600px;
+    padding: var(--size-6);
+   
     border: 20px solid transparent;
     border-image: url(../assets/images/borderLine.png) 5% stretch;
+   
   }
- 
+  @keyframes slide-in-left{0%{transform:translateX(-1000px);opacity:0}100%{transform:translateX(0);opacity:1}}
+
+ /*  #analog {
+   
+    animation:slide-in-left 6s cubic-bezier(.25,.46,.45,.94) both;
+  }
+  #glitch {
+    animation-delay: 1s;
+    animation:slide-in-left 6s cubic-bezier(.25,.46,.45,.94) both;
+  }
+
+  #lomografi{
+    animation-delay: 1.5s;
+      animation:slide-in-left 6s cubic-bezier(.25,.46,.45,.94) both;
+  }
+ */
   h3 {
     text-align: center;
   }
 
-  
   .infoboxDiv1 {
     display: grid;
     background-image: url(../assets/images/analog.webp);
     justify-items: center;
     padding: 20px;
-   
   }
 
   .infoboxDiv2 {
@@ -87,34 +94,30 @@ max-width: 600px;
     padding: 20px;
   }
 
-  .glitch{
-    display: flex;
- flex-direction: column;
-width: 70%;
-max-width: 600px;
- padding: var(--size-6); 
- justify-items: center;
-    border: 20px solid transparent;
-    border-image: url(../assets/images/borderLine.png) 5% stretch;
-  }
-
   /*infoboks*/
-
-
-
-  
 </style>
 
 <script>
-
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
-  
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.from("#glitch", {
-      x: -500,
-      duration: 5,
-      scrollTrigger: "#glitch",
-    });
-  </script>
 
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.from(" #analog", {
+    x:-500,
+    duration: 5,
+    scrollTrigger: "#analog",
+  });
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.from(" #glitch", {
+    x:-500,
+    duration: 5,
+    scrollTrigger: "#glitch",
+  });
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.from(" #lomografi", {
+    x:-500,
+    duration: 5,
+    scrollTrigger: "#lomografi",
+  });
+</script>
