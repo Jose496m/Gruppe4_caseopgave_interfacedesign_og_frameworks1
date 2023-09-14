@@ -18,7 +18,7 @@ h2 {
 
 p {
   font-size: var(--font-size-1);
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 h4 {
@@ -78,6 +78,6 @@ h3 {
   color: var(--gray-1);
 }
 
-.orange{
+.orange {
   color: #fca21b;
 }
