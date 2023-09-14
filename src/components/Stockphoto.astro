@@ -1,54 +1,44 @@
 <div class="stockfoto">
-<div  class="stock">
+  <div class="stock">
     <h3>Stock-fotos</h3>
-    <p class="white">
-      Stock-fotos er billeder, der kan købes fra et foto-website. De bruges af
-      aviser, til markedsføring og som indhold på websites. En licens til at
-      bruge et foto koster typisk mellem 10 og 100 kroner, alt afhængig af
-      hvad de skal bruges til.
-    </p>
-    <p class="white">
-      Stock-fotos bliver ofte kritiseret for at være uden sjæl - det er de der
-      billeder af en læge i hvid kittel med stetoskop om halsen på en meget
-      hvid baggrund eller en meget glad dame fra virksomhedens salgs- eller
-      supportafdeling.
-    </p>
-    <p class="white">
-      Stock-fotos har eksisteret i mange år. Før branchen blev digital, tilbød
-      stock-foto virksomhederne billedmapper, der kunne bestilles fra. Men
-      stock-foto branchen var én af de tidlige til at blive fuldt
-      digitaliseret.
-    </p>
+    <p class="white">Stock-fotos er billeder, der kan købes fra et foto-website. De bruges af aviser, til markedsføring og som indhold på websites. En licens til at bruge et foto koster typisk mellem 10 og 100 kroner, alt afhængig af hvad de skal bruges til.</p>
+    <p class="white">Stock-fotos bliver ofte kritiseret for at være uden sjæl - det er de der billeder af en læge i hvid kittel med stetoskop om halsen på en meget hvid baggrund eller en meget glad dame fra virksomhedens salgs- eller supportafdeling.</p>
+    <p class="white">Stock-fotos har eksisteret i mange år. Før branchen blev digital, tilbød stock-foto virksomhederne billedmapper, der kunne bestilles fra. Men stock-foto branchen var én af de tidlige til at blive fuldt digitaliseret.</p>
   </div>
 </div>
-  <style>
-
-    .stockfoto{
-       margin-bottom: 10vw;
-        display: grid;
-        justify-items: center;
-    }
-.stock{
+<style>
+  .stockfoto {
+    margin-bottom: 10vw;
+    display: grid;
+    justify-items: center;
+  }
+  .stock {
     display: flex;
     flex-direction: column;
     width: 70%;
     max-width: 600px;
     padding: var(--size-6);
     border: 20px solid transparent;
-    border-image: url(../assets/images/borderLine.png) 5% stretch; 
+    border-image: url(../assets/images/borderLine.png) 5% stretch;
   }
+  @media only screen and (max-width: 600px) {
+    .stock {
+      padding: var(--size-2);
+    }
+    p {
+      padding-top: var(--size-2);
+    }
+  }
+</style>
 
-
-  </style>
-
-  <script>
-      import { gsap } from "gsap";
+<script>
+  import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
 
   gsap.registerPlugin(ScrollTrigger);
   gsap.from(" .stockfoto", {
-    y:300,
+    y: 300,
     duration: 3,
     scrollTrigger: ".stock",
   });
-  </script>
+</script>
