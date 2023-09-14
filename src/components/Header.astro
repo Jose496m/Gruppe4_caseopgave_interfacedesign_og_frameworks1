@@ -1,4 +1,8 @@
-<div class="layout video-container">
+---
+const { scroll } = Astro.props;
+---
+
+<div class="layout video-container video1">
   <video autoplay loop muted src="/header1.mp4"></video>
   <h1>UPERFEKT ER PERFEKT</h1>
 </div>
@@ -15,6 +19,48 @@
     bruge sine egne fotos - faktisk kan han ikke fordrage sit eget arbejde.
   </p>
 </div>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.to(".video1", {
+    scrollTrigger: {
+      trigger: ".video1",
+      start: "start top ",
+      end: "top center",
+      //markers: true,
+    },
+    y: -50,
+    scale: 1,
+    duration: 1,
+  });
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.from(".scroll", {
+    scrollTrigger: {
+      trigger: ".scroll",
+      start: "start bottom ",
+      end: "bottom center",
+      //markers: true,
+    },
+    y: 300,
+    scale: 1,
+    duration: 1,
+  });
+  gsap.from(".scroll2", {
+    scrollTrigger: {
+      trigger: ".scroll",
+      start: "start bottom ",
+      end: "bottom center",
+      //markers: true,
+    },
+    y: 250,
+    scale: 1,
+    duration: 1,
+  });
+</script>
 
 <style>
   body,
