@@ -34,43 +34,44 @@ import Citater from "./Citater.astro";
     </div>
     <Tekstboks class="text1" text="Så Pierre gav sig selv en udfordring: At blive landets bedst sælgende stock-fotograf. Pierre lejede et gammelt, billigt erhvervslokale i Ishøj industri, fik fløjet billige skuespillere ind fra Polen og Baltikum, og fotograferede 10 timer om dagen." />
   </div>
-  <script>
-    import { gsap } from "gsap";
-    import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to(".overskrift1", {
-      scrollTrigger: {
-        trigger: ".overskrift1",
-        start: "start bottom ",
-        end: "bottom center",
-        //markers: true,
-      },
-      y: -300,
-      scale: 1,
-      duration: 1,
-    });
-    gsap.to(".billedet", {
-      duration: 5,
-      scrollTrigger: {
-        trigger: ".billedet",
-        pin: true,
-        //markers: true,
-      },
-    });
-    gsap.from(".overskrift1", {
-      scrollTrigger: {
-        trigger: ".overskrift1",
-        start: "start bottom ",
-        end: "top center",
-        //markers: true,
-      },
-      y: 300,
-      scale: 1,
-      duration: 1,
-    });
-  </script>
 </section>
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.to(".overskrift1", {
+    scrollTrigger: {
+      trigger: ".overskrift1",
+      start: "start bottom ",
+      end: "bottom center",
+      //markers: true,
+    },
+    y: -300,
+    scale: 1,
+    duration: 1,
+  });
+  gsap.to(".billedet", {
+    duration: 5,
+    scrollTrigger: {
+      trigger: ".billedet",
+      pin: true,
+      //markers: true,
+    },
+  });
+  gsap.from(".overskrift1", {
+    scrollTrigger: {
+      trigger: ".overskrift1",
+      start: "start bottom ",
+      end: "top center",
+      //markers: true,
+    },
+    y: 300,
+    scale: 1,
+    duration: 1,
+  });
+</script>
+
 <style>
   .grow {
     transition: all 0.2s ease-in-out;
