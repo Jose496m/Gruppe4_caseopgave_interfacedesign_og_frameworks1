@@ -1,6 +1,9 @@
 <div class="layout video-container video1">
   <video autoplay loop muted src="/header1.mp4"></video>
-  <h1 class="scroll3">UPERFEKT ER PERFEKT</h1>
+</div>
+
+<div class="text-container3 scroll0">
+  <h1>UPERFEKT ER PERFEKT</h1>
 </div>
 
 <div class="text-container scroll">
@@ -33,6 +36,17 @@
   });
 
   gsap.registerPlugin(ScrollTrigger);
+  gsap.from(".scroll0", {
+    scrollTrigger: {
+      trigger: ".scroll0",
+      start: "start bottom ",
+      end: "top center",
+      //markers: true,
+    },
+    y: 300,
+    scale: 1,
+    duration: 1,
+  });
   gsap.from(".scroll", {
     scrollTrigger: {
       trigger: ".scroll",
@@ -88,14 +102,21 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  .text-container3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
   @font-face {
     font-family: "Grandstander";
   }
 
-  h1, video {
+  h1,
+  video {
     grid-area: 1/1;
-  } 
+  }
   h1 {
     color: var(--orange-5);
     font-family: "Grandstander";
@@ -136,10 +157,11 @@
       display: grid;
     }
 
-    video { width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    display: block;
+    video {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      display: block;
     }
     .text-container {
       margin-top: var(--size-4);
