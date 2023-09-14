@@ -6,6 +6,28 @@ const { oversrift } = Astro.props;
   <slot />
   <h2>{oversrift}</h2>
 </section>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.to(
+    { overskrift },
+    {
+      scrollTrigger: {
+        trigger: { overskrift },
+        start: "start bottom ",
+        end: "bottom center",
+        //markers: true,
+      },
+      y: 300,
+      scale: 1,
+      duration: 1,
+    }
+  );
+</script>
+
 <style>
   section {
     display: grid;
