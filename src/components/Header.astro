@@ -1,20 +1,14 @@
 <div class="layout video-container video1">
-  <video autoplay loop muted src="/header1.mp4"></video>
+  <video class="desktop" autoplay loop muted src="/header1.mp4"></video>
+  <video class="mobile" autoplay loop muted src="/mobile.mp4"></video>
   <h1 class="scroll3">UPERFEKT ER PERFEKT</h1>
 </div>
 
 <div class="text-container scroll">
-  <p>
-    Pierre Falcke. Du ved formentligt ikke hvem han er. Men indtil for kort tid
-    siden, så du hans værker et par gange om dagen, hver dag, året rundt.
-  </p>
+  <p>Pierre Falcke. Du ved formentligt ikke hvem han er. Men indtil for kort tid siden, så du hans værker et par gange om dagen, hver dag, året rundt.</p>
 </div>
 <div class="text-container2 scroll2">
-  <p>
-    Pierre Falcke var en af verdens bedst sælgende stock-fotografer, og han
-    solgte over 2 millioner fotos om året. Men Pierre kunne ikke drømme om at
-    bruge sine egne fotos - faktisk kan han ikke fordrage sit eget arbejde.
-  </p>
+  <p>Pierre Falcke var en af verdens bedst sælgende stock-fotografer, og han solgte over 2 millioner fotos om året. Men Pierre kunne ikke drømme om at bruge sine egne fotos - faktisk kan han ikke fordrage sit eget arbejde.</p>
 </div>
 
 <script>
@@ -89,6 +83,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  .desktop {
+    display: block;
+  }
+  .mobil {
+    display: none;
+  }
 
   @font-face {
     font-family: "Grandstander";
@@ -144,6 +144,13 @@
     }
     .text-container2 {
       margin-top: var(--size-11);
+    }
+    .desktop {
+      display: none;
+    }
+
+    .mobil {
+      display: block;
     }
   }
 </style>
