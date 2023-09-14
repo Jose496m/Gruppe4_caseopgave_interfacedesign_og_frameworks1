@@ -5,10 +5,10 @@ const {infotekst} = Astro.props;
 
 ---
 
-<div class="container">
-  <section class="dropdown">
+
     <div class="infoboxDiv1">
-      <Infoboks title="Analog fotografering">
+      <div class="grid_1-1">
+        <h3> Analog fotografering</h3>
         <p class="orange">
           Fotografering med gode, gammeldags filmruller. Analog
           fotografering stiger for tiden i popularitet, specielt blandt
@@ -18,20 +18,24 @@ const {infotekst} = Astro.props;
           koster penge, og man bliver nødt til at overveje motiv og lys
           grundigere før der skydes - tænk før du trykker.
         </p>
-      </Infoboks>
+      </div>
     </div>
+
     <div class="infoboxDiv2">
-      <Infoboks class="glitch" title="Glitch Art">
+      <div class="grid_1-1" id="glitch">
+      <h3>Glitch Art</h3>
         <p class="orange">
           Når der sker en teknisk fejl i et medie/en kommunikationskanal
           kaldes det en glitch. Glitch art går ud på at dyrke fejlene for at
           skabe kunst. En meget typisk glitch er små analoge eller digitale
           fejl i farvegengivelsen af billeder.
         </p>
-      </Infoboks>
+      </div>
     </div>
+
     <div class="infoboxDiv3">
-      <Infoboks title="Lomografi">
+      <div class="grid_1-1" id="lomografi">
+      <h3>Lomografi</h3>
         <p class="orange">
           Et lomografi er egentlig bare et fotografi skudt uden videre
           omtankte, og med noget foto-udstyr af ret alternativ
@@ -40,17 +44,11 @@ const {infotekst} = Astro.props;
           anti-fotograf-agtigt. men en del foto-entusiaster dyrker den
           slags, og ser det som en foto-genre eller endda en livsstil.
         </p>
-      </Infoboks>
+      </div>
     </div>
-  </section>
-</div>
 
 
-<div class="grid_1-1">
-  <h3 class="dropdown-header">{title}</h3>
-  <p>{infotekst}</p>
-  <slot />
-</div>
+
 <style>
   .grid_1-1 {
     display: flex;
@@ -101,6 +99,10 @@ max-width: 600px;
   }
 
   /*infoboks*/
+
+
+
+  
 </style>
 
 <script>
@@ -109,10 +111,10 @@ max-width: 600px;
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   
   gsap.registerPlugin(ScrollTrigger);
-  gsap.from(".glitch", {
+  gsap.from("#glitch", {
       x: -500,
       duration: 5,
-      scrollTrigger: ".glitch",
+      scrollTrigger: "#glitch",
     });
   </script>
 
