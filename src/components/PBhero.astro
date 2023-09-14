@@ -3,10 +3,14 @@ import { Image } from "astro:assets";
 import pierresBer from "../assets/images/pierre.webp";
 ---
 
-<section class="afsnit">
-  <Image class="billedet" src={pierresBer} alt="afsnit Pierres Berømmelse" />
-  <h2 class="overskrift1">Pierres Berømmelse</h2>
+<section class="afsnittet">
+    <Image  class="billedet" src={pierresBer} alt="afsnit Pierres Berømmelse" />
+  
+  <div class="PB">
+    <h2>Pierres Berømmelse</h2>
+  </div>
 </section>
+
 <script>
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -14,37 +18,38 @@ import pierresBer from "../assets/images/pierre.webp";
   gsap.registerPlugin(ScrollTrigger);
 
   gsap.to(".billedet", {
-    duration: 5,
+    duration: 1,
     scrollTrigger: {
       trigger: ".billedet",
       pin: true,
       //markers: true,
     },
   });
-  gsap.from(".overskrift1", {
+  gsap.from(".PB", {
     scrollTrigger: {
-      trigger: ".overskrift1",
-      start: "start bottom ",
-      end: "top center",
-      //markers: true,
+      trigger: ".afsnittet",
+      start: "bottom top ",
+      end: "center bottom",
+      markers: true,
     },
-    y: 300,
+    y:800,
     scale: 1,
     duration: 1,
   });
 </script>
 <style>
-  .overskrift1 {
+  .PB {
+    display: grid;
     color: #fca21b;
     font-size: 7rem;
     font-family: "Rubik Glitch", cursive;
     animation: flicker-3 2.5s linear infinite both;
   }
-  .overskrift1,
+  .PB,
   .billedet {
     grid-area: 1/1;
   }
-  .afsnit {
+  .afsnittet {
     display: grid;
   }
 
@@ -102,10 +107,6 @@ import pierresBer from "../assets/images/pierre.webp";
       opacity: 1;
     }
   }
-  /* .overskrift1 {
-    display: block;
-  } */
-  section {
-    display: grid;
-  }
+
+
 </style>
