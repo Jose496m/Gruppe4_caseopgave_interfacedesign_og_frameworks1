@@ -3,17 +3,10 @@
   <h1>UPERFEKT ER PERFEKT</h1>
 </div>
 <div class="text-container scroll">
-  <p>
-    Pierre Falcke. Du ved formentligt ikke hvem han er. Men indtil for kort tid
-    siden, så du hans værker et par gange om dagen, hver dag, året rundt.
-  </p>
+  <p>Pierre Falcke. Du ved formentligt ikke hvem han er. Men indtil for kort tid siden, så du hans værker et par gange om dagen, hver dag, året rundt.</p>
 </div>
 <div class="text-container2 scroll2">
-  <p>
-    Pierre Falcke var en af verdens bedst sælgende stock-fotografer, og han
-    solgte over 2 millioner fotos om året. Men Pierre kunne ikke drømme om at
-    bruge sine egne fotos - faktisk kan han ikke fordrage sit eget arbejde.
-  </p>
+  <p>Pierre Falcke var en af verdens bedst sælgende stock-fotografer, og han solgte over 2 millioner fotos om året. Men Pierre kunne ikke drømme om at bruge sine egne fotos - faktisk kan han ikke fordrage sit eget arbejde.</p>
 </div>
 
 <script>
@@ -117,7 +110,7 @@
     width: 100%;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 600px) {
     @font-face {
       font-family: "Grandstander";
     }
@@ -131,13 +124,22 @@
       font-size: var(--size-7);
       place-self: center center;
     }
-
+    p {
+      padding-inline: var(--size-11);
+      font-size: 2rem;
+    }
     .layout {
       display: grid;
     }
 
     video {
       overflow: hidden;
+    }
+    .text-container {
+      margin-top: var(--size-4);
+    }
+    .text-container2 {
+      margin-top: var(--size-11);
     }
   }
 </style>
