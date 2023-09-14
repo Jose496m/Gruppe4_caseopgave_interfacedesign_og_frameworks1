@@ -5,6 +5,47 @@ const {infotekst} = Astro.props;
 
 ---
 
+<div class="container">
+  <section class="dropdown">
+    <div class="infoboxDiv1">
+      <Infoboks title="Analog fotografering">
+        <p class="orange">
+          Fotografering med gode, gammeldags filmruller. Analog
+          fotografering stiger for tiden i popularitet, specielt blandt
+          unge, og prisen på filmruller og vintage-kameraer skyder i vejret.
+          Mange fotografer synes at film-fotografering er mere ægte har mere
+          “sjæl.” Analog fotografering er langsommmere, hvert enkelt billede
+          koster penge, og man bliver nødt til at overveje motiv og lys
+          grundigere før der skydes - tænk før du trykker.
+        </p>
+      </Infoboks>
+    </div>
+    <div class="infoboxDiv2">
+      <Infoboks class="glitch" title="Glitch Art">
+        <p class="orange">
+          Når der sker en teknisk fejl i et medie/en kommunikationskanal
+          kaldes det en glitch. Glitch art går ud på at dyrke fejlene for at
+          skabe kunst. En meget typisk glitch er små analoge eller digitale
+          fejl i farvegengivelsen af billeder.
+        </p>
+      </Infoboks>
+    </div>
+    <div class="infoboxDiv3">
+      <Infoboks title="Lomografi">
+        <p class="orange">
+          Et lomografi er egentlig bare et fotografi skudt uden videre
+          omtankte, og med noget foto-udstyr af ret alternativ
+          kvalitet.Lomografier skydes ofte på gode, gammeldags filmruller,
+          men kan også skyde digitalt. Det kan måske lyde lidt
+          anti-fotograf-agtigt. men en del foto-entusiaster dyrker den
+          slags, og ser det som en foto-genre eller endda en livsstil.
+        </p>
+      </Infoboks>
+    </div>
+  </section>
+</div>
+
+
 <div class="grid_1-1">
   <h3 class="dropdown-header">{title}</h3>
   <p>{infotekst}</p>
@@ -25,4 +66,53 @@ max-width: 600px;
   h3 {
     text-align: center;
   }
+
+  
+  .infoboxDiv1 {
+    display: grid;
+    background-image: url(../assets/images/analog.webp);
+    justify-items: center;
+    padding: 20px;
+   
+  }
+
+  .infoboxDiv2 {
+    display: grid;
+    background-image: url(../assets/images/glitch.webp);
+    justify-items: center;
+    padding: 20px;
+  }
+  .infoboxDiv3 {
+    display: grid;
+    background-image: url(../assets/images/lomografi.webp);
+    justify-items: center;
+    padding: 20px;
+  }
+
+  .glitch{
+    display: flex;
+ flex-direction: column;
+width: 70%;
+max-width: 600px;
+ padding: var(--size-6); 
+ justify-items: center;
+    border: 20px solid transparent;
+    border-image: url(../assets/images/borderLine.png) 5% stretch;
+  }
+
+  /*infoboks*/
 </style>
+
+<script>
+
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.from(".glitch", {
+      x: -500,
+      duration: 5,
+      scrollTrigger: ".glitch",
+    });
+  </script>
+
