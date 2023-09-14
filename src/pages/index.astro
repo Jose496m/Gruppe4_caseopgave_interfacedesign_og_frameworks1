@@ -4,7 +4,6 @@ import Infoboks from "../components/Infoboks.astro";
 import Skillevej from "../components/Skillevej.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PierresBereommelse from "../components/PierresBereommelse.astro";
-import infoboxBorder from "../assets/images/infoboxBorder.svg";
 import Begyndelse from "../components/Begyndelse.astro";
 ---
 
@@ -38,9 +37,20 @@ import Begyndelse from "../components/Begyndelse.astro";
     
     <Begyndelse />
   </main>
+  <footer>
+    <p>© Josephine Olesen, Amanda Guldager Holm, Hanna Israielian, Emil Bjærge Abrahamson</p>
+  </footer>
 </BaseLayout>
 
 <style>
+  footer {
+    padding: var(--size-10) 0;
+    padding-top: var(--size-11);
+    color: var(--bg);
+    background-color: var(--brand-color);
+    display: flex;
+    justify-content: center;
+  }
   .pierres_bereommelse {
     background-color: #404040;
   }
