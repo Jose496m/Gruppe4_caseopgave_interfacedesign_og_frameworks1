@@ -5,32 +5,14 @@ import Skillevej from "../components/Skillevej.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PierresBereommelse from "../components/PierresBereommelse.astro";
 import Begyndelse from "../components/Begyndelse.astro";
+import Stockphoto from "../components/Stockphoto.astro";
 ---
 
 <BaseLayout>
   <main>
     <Header />
-
-    <div title="Stock-fotos">
-      <p class="white">
-        Stock-fotos er billeder, der kan købes fra et foto-website. De bruges af
-        aviser, til markedsføring og som indhold på websites. En licens til at
-        bruge et foto koster typisk mellem 10 og 100 kroner, alt afhængig af
-        hvad de skal bruges til.
-      </p>
-      <p class="white">
-        Stock-fotos bliver ofte kritiseret for at være uden sjæl - det er de der
-        billeder af en læge i hvid kittel med stetoskop om halsen på en meget
-        hvid baggrund eller en meget glad dame fra virksomhedens salgs- eller
-        supportafdeling.
-      </p>
-      <p class="white">
-        Stock-fotos har eksisteret i mange år. Før branchen blev digital, tilbød
-        stock-foto virksomhederne billedmapper, der kunne bestilles fra. Men
-        stock-foto branchen var én af de tidlige til at blive fuldt
-        digitaliseret.
-      </p>
-    </div>
+<div class="space"></div>
+ <Stockphoto/>
     <PierresBereommelse />
     <Skillevej />
 
@@ -43,6 +25,9 @@ import Begyndelse from "../components/Begyndelse.astro";
 </BaseLayout>
 
 <style>
+  .space{
+    height: 15vw;
+  }
   footer {
     padding: var(--size-10) 0;
     padding-top: var(--size-11);
