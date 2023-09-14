@@ -11,33 +11,30 @@ import Begyndelse from "../components/Begyndelse.astro";
   <main>
     <Header />
 
-    <Infoboks title="Stock-fotos">
-      <p class="white">Stock-fotos er billeder, der kan købes fra et foto-website. De bruges af aviser, til markedsføring og som indhold på websites. En licens til at bruge et foto koster typisk mellem 10 og 100 kroner, alt afhængig af hvad de skal bruges til.</p>
-      <p class="white">Stock-fotos bliver ofte kritiseret for at være uden sjæl - det er de der billeder af en læge i hvid kittel med stetoskop om halsen på en meget hvid baggrund eller en meget glad dame fra virksomhedens salgs- eller supportafdeling.</p>
-      <p class="white">Stock-fotos har eksisteret i mange år. Før branchen blev digital, tilbød stock-foto virksomhederne billedmapper, der kunne bestilles fra. Men stock-foto branchen var én af de tidlige til at blive fuldt digitaliseret.</p>
-    </Infoboks>
+    <div title="Stock-fotos">
+      <p class="white">
+        Stock-fotos er billeder, der kan købes fra et foto-website. De bruges af
+        aviser, til markedsføring og som indhold på websites. En licens til at
+        bruge et foto koster typisk mellem 10 og 100 kroner, alt afhængig af
+        hvad de skal bruges til.
+      </p>
+      <p class="white">
+        Stock-fotos bliver ofte kritiseret for at være uden sjæl - det er de der
+        billeder af en læge i hvid kittel med stetoskop om halsen på en meget
+        hvid baggrund eller en meget glad dame fra virksomhedens salgs- eller
+        supportafdeling.
+      </p>
+      <p class="white">
+        Stock-fotos har eksisteret i mange år. Før branchen blev digital, tilbød
+        stock-foto virksomhederne billedmapper, der kunne bestilles fra. Men
+        stock-foto branchen var én af de tidlige til at blive fuldt
+        digitaliseret.
+      </p>
+    </div>
     <PierresBereommelse />
     <Skillevej />
 
-    <div class="container">
-      <section class="dropdown">
-        <div class="infoboxDiv1">
-          <Infoboks title="Analog fotografering">
-            <p class="orange">Fotografering med gode, gammeldags filmruller. Analog fotografering stiger for tiden i popularitet, specielt blandt unge, og prisen på filmruller og vintage-kameraer skyder i vejret. Mange fotografer synes at film-fotografering er mere ægte har mere “sjæl.” Analog fotografering er langsommmere, hvert enkelt billede koster penge, og man bliver nødt til at overveje motiv og lys grundigere før der skydes - tænk før du trykker.</p>
-          </Infoboks>
-        </div>
-        <div class="infoboxDiv2">
-          <Infoboks title="Glitch Art">
-            <p class="orange">Når der sker en teknisk fejl i et medie/en kommunikationskanal kaldes det en glitch. Glitch art går ud på at dyrke fejlene for at skabe kunst. En meget typisk glitch er små analoge eller digitale fejl i farvegengivelsen af billeder.</p>
-          </Infoboks>
-        </div>
-        <div class="infoboxDiv3">
-          <Infoboks title="Lomografi">
-            <p class="orange">Et lomografi er egentlig bare et fotografi skudt uden videre omtankte, og med noget foto-udstyr af ret alternativ kvalitet.Lomografier skydes ofte på gode, gammeldags filmruller, men kan også skyde digitalt. Det kan måske lyde lidt anti-fotograf-agtigt. men en del foto-entusiaster dyrker den slags, og ser det som en foto-genre eller endda en livsstil.</p>
-          </Infoboks>
-        </div>
-      </section>
-    </div>
+    <Infoboks />
     <Begyndelse />
   </main>
   <footer>
@@ -58,25 +55,5 @@ import Begyndelse from "../components/Begyndelse.astro";
     background-color: #404040;
   }
   /*infoboks*/
-  .infoboxDiv1 {
-    display: grid;
-    background-image: url(../assets/images/analog.webp);
-    justify-items: center;
-    padding: 20px;
-  }
-
-  .infoboxDiv2 {
-    display: grid;
-    background-image: url(../assets/images/glitch.webp);
-    justify-items: center;
-    padding: 20px;
-  }
-  .infoboxDiv3 {
-    display: grid;
-    background-image: url(../assets/images/lomografi.webp);
-    justify-items: center;
-    padding: 20px;
-  }
-
-  /*infoboks*/
-</style>
+  </style>
+  
