@@ -4,10 +4,17 @@
 </div>
 
 <div class="text-container scroll">
-  <p>Pierre Falcke. Du ved formentligt ikke hvem han er. Men indtil for kort tid siden, så du hans værker et par gange om dagen, hver dag, året rundt.</p>
+  <p>
+    Pierre Falcke. Du ved formentligt ikke hvem han er. Men indtil for kort tid
+    siden, så du hans værker et par gange om dagen, hver dag, året rundt.
+  </p>
 </div>
 <div class="text-container2 scroll2">
-  <p>Pierre Falcke var en af verdens bedst sælgende stock-fotografer, og han solgte over 2 millioner fotos om året. Men Pierre kunne ikke drømme om at bruge sine egne fotos - faktisk kan han ikke fordrage sit eget arbejde.</p>
+  <p>
+    Pierre Falcke var en af verdens bedst sælgende stock-fotografer, og han
+    solgte over 2 millioner fotos om året. Men Pierre kunne ikke drømme om at
+    bruge sine egne fotos - faktisk kan han ikke fordrage sit eget arbejde.
+  </p>
 </div>
 
 <script>
@@ -65,7 +72,6 @@
 
   .video-container {
     background-size: cover;
-
     height: 100vh;
   }
 
@@ -87,10 +93,9 @@
     font-family: "Grandstander";
   }
 
-  h1,
-  video {
+  h1, video {
     grid-area: 1/1;
-  }
+  } 
   h1 {
     color: var(--orange-5);
     font-family: "Grandstander";
@@ -103,8 +108,10 @@
   }
 
   video {
-    overflow: hidden;
     width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
   }
 
   @media (max-width: 600px) {
@@ -129,8 +136,10 @@
       display: grid;
     }
 
-    video {
-      overflow: hidden;
+    video { width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
     }
     .text-container {
       margin-top: var(--size-4);

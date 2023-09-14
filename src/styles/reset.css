@@ -26,12 +26,11 @@ body {
 
 img,
 picture,
-video,
 svg {
   display: block;
   max-width: 100%;
   height: auto;
-}
+} 
 
 input,
 button,
