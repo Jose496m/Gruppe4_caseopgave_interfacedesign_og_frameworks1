@@ -1,12 +1,36 @@
 ---
 const { oversrift } = Astro.props;
+import { Image } from "astro:assets";
+import pierresBer from "../assets/images/pierre.webp";
 ---
 
 <section class="baggrund">
   <slot />
-  <h2>{oversrift}</h2>
+  <h2 class="overskrift1">{oversrift}</h2>
 </section>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.to(".overskrift1", {
+    scrollTrigger: {
+      trigger: ".overskrift1",
+      start: "start bottom ",
+      end: "bottom center",
+      //markers: true,
+    },
+    y: -300,
+    scale: 1,
+    duration: 1,
+  });
+</script>
+
 <style>
+  .overskrift1 {
+    display: block;
+  }
   section {
     display: grid;
   }
