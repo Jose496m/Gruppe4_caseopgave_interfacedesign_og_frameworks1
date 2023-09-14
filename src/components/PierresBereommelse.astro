@@ -10,21 +10,16 @@ import Citater from "./Citater.astro";
 ---
 
 <section class="pierres_bereommelse">
-  <Baggrundsbilleder oversrift="Pierres berømmelse" class="overskrift1">
-    <Image src={pierresBer} alt="afsnit Pierres Berømmelse" />
-  </Baggrundsbilleder>
+  <div class="afsnit">
+    <Image class="billedet" src={pierresBer} alt="afsnit Pierres Berømmelse" />
+    <h2 class="overskrift1">Pierres Berømmelse</h2>
+  </div>
   <div class="text1">
-    <Tekstboks
-      text="Pierres interesse for foto startede som ganske ung - som 10-årig fik han sin fars gamle Rollei-kamera, og begyndte at skyde løs. Det var før den digitale revolution, så alle Pierres lommepenge blev brugt på filmruller og fremkaldelse af film. Pierre fortsatte med at fotografere på film op gennem gymnasietiden."
-    />
-    <Tekstboks
-      text="Pierre over til digital fotografering i starten af 2000’erne, da han begyndte at studere fotografisk kommunikation på DMJX. Her åbnede en ny verden sig: "
-    />
+    <Tekstboks text="Pierres interesse for foto startede som ganske ung - som 10-årig fik han sin fars gamle Rollei-kamera, og begyndte at skyde løs. Det var før den digitale revolution, så alle Pierres lommepenge blev brugt på filmruller og fremkaldelse af film. Pierre fortsatte med at fotografere på film op gennem gymnasietiden." />
+    <Tekstboks text="Pierre over til digital fotografering i starten af 2000’erne, da han begyndte at studere fotografisk kommunikation på DMJX. Her åbnede en ny verden sig: " />
   </div>
   <div class="text_tyk1">
-    <TekstTyk
-      text="Reklamefotografering i studie, lyssætning og manipulering af billeder i Photoshop blev hans nye stil. "
-    />
+    <TekstTyk text="Reklamefotografering i studie, lyssætning og manipulering af billeder i Photoshop blev hans nye stil. " />
   </div>
   <div class="image1">
     <Image class="img grow" src={stock1} alt="Apoteket" />
@@ -33,20 +28,48 @@ import Citater from "./Citater.astro";
     <Image class="img grow" src={stock2} alt="Sammenhold" />
   </div>
   <div class="text2">
-    <Tekstboks
-      class="text1"
-      text="På det tidspunkt var stock-foto industrien i starten af en revolution: De første online stock-foto websites begyndte at komme på markedet, men de store, etablerede spillere på markedet holdt lidt igen. "
-    />
+    <Tekstboks class="text1" text="På det tidspunkt var stock-foto industrien i starten af en revolution: De første online stock-foto websites begyndte at komme på markedet, men de store, etablerede spillere på markedet holdt lidt igen. " />
     <div class="text_tyk2">
-      <Citater
-        text=" ”Om ganske få år er hele branchen digital, og dem der ikke hopper med på den digitale vogn, lukker. ”"
-      />
+      <Citater text=" ”Om ganske få år er hele branchen digital, og dem der ikke hopper med på den digitale vogn, lukker. ”" />
     </div>
-    <Tekstboks
-      class="text1"
-      text="Så Pierre gav sig selv en udfordring: At blive landets bedst sælgende stock-fotograf. Pierre lejede et gammelt, billigt erhvervslokale i Ishøj industri, fik fløjet billige skuespillere ind fra Polen og Baltikum, og fotograferede 10 timer om dagen."
-    />
+    <Tekstboks class="text1" text="Så Pierre gav sig selv en udfordring: At blive landets bedst sælgende stock-fotograf. Pierre lejede et gammelt, billigt erhvervslokale i Ishøj industri, fik fløjet billige skuespillere ind fra Polen og Baltikum, og fotograferede 10 timer om dagen." />
   </div>
+  <script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(".overskrift1", {
+      scrollTrigger: {
+        trigger: ".overskrift1",
+        start: "start bottom ",
+        end: "bottom center",
+        //markers: true,
+      },
+      y: -300,
+      scale: 1,
+      duration: 1,
+    });
+    gsap.to(".billedet", {
+      duration: 5,
+      scrollTrigger: {
+        trigger: ".billedet",
+        pin: true,
+        //markers: true,
+      },
+    });
+    gsap.from(".overskrift1", {
+      scrollTrigger: {
+        trigger: ".overskrift1",
+        start: "start bottom ",
+        end: "top center",
+        //markers: true,
+      },
+      y: 300,
+      scale: 1,
+      duration: 1,
+    });
+  </script>
 </section>
 <style>
   .grow {
@@ -95,6 +118,128 @@ import Citater from "./Citater.astro";
   }
   section {
     background-color: var(--bg);
+  }
+  .overskrift1 {
+    display: block;
+  }
+  section {
+    display: grid;
+  }
+  h2 {
+    color: #fca21b;
+    font-size: 7rem;
+    font-family: "Rubik Glitch", cursive;
+    -webkit-animation: flicker-3 2.5s linear infinite both;
+    animation: flicker-3 2.5s linear infinite both;
+  }
+
+  @-webkit-keyframes flicker-3 {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    32.98% {
+      opacity: 1;
+    }
+    33% {
+      opacity: 0;
+    }
+    34% {
+      opacity: 0;
+    }
+    34.02% {
+      opacity: 1;
+    }
+    34.98% {
+      opacity: 1;
+    }
+    35% {
+      opacity: 0;
+    }
+    35.9% {
+      opacity: 0;
+    }
+    35.92% {
+      opacity: 1;
+    }
+    38.98% {
+      opacity: 1;
+    }
+    39% {
+      opacity: 0;
+    }
+    39.8% {
+      opacity: 0;
+    }
+    39.82% {
+      opacity: 1;
+    }
+    83.98% {
+      opacity: 1;
+    }
+    84% {
+      opacity: 0;
+    }
+    84.9% {
+      opacity: 0;
+    }
+    84.92% {
+      opacity: 1;
+    }
+  }
+  @keyframes flicker-3 {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    32.98% {
+      opacity: 1;
+    }
+    33% {
+      opacity: 0;
+    }
+    34% {
+      opacity: 0;
+    }
+    34.02% {
+      opacity: 1;
+    }
+    34.98% {
+      opacity: 1;
+    }
+    35% {
+      opacity: 0;
+    }
+    35.9% {
+      opacity: 0;
+    }
+    35.92% {
+      opacity: 1;
+    }
+    38.98% {
+      opacity: 1;
+    }
+    39% {
+      opacity: 0;
+    }
+    39.8% {
+      opacity: 0;
+    }
+    39.82% {
+      opacity: 1;
+    }
+    83.98% {
+      opacity: 1;
+    }
+    84% {
+      opacity: 0;
+    }
+    84.9% {
+      opacity: 0;
+    }
+    84.92% {
+      opacity: 1;
+    }
   }
   @media only screen and (max-width: 600px) {
     .img {
