@@ -5,10 +5,10 @@ const {infotekst} = Astro.props;
 
 ---
 
-<div class="container">
-  <section class="dropdown">
+
     <div class="infoboxDiv1">
-      <Infoboks title="Analog fotografering">
+      <div title="Analog fotografering">
+        <h3 class="dropdown-header"></h3>
         <p class="orange">
           Fotografering med gode, gammeldags filmruller. Analog
           fotografering stiger for tiden i popularitet, specielt blandt
@@ -18,20 +18,22 @@ const {infotekst} = Astro.props;
           koster penge, og man bliver nødt til at overveje motiv og lys
           grundigere før der skydes - tænk før du trykker.
         </p>
-      </Infoboks>
+      </div>
     </div>
     <div class="infoboxDiv2">
-      <Infoboks class="glitch" title="Glitch Art">
+      <div class="glitch" title="Glitch Art">
+        <h3 class="dropdown-header">{title}</h3>
         <p class="orange">
           Når der sker en teknisk fejl i et medie/en kommunikationskanal
           kaldes det en glitch. Glitch art går ud på at dyrke fejlene for at
           skabe kunst. En meget typisk glitch er små analoge eller digitale
           fejl i farvegengivelsen af billeder.
         </p>
-      </Infoboks>
+      </div>
     </div>
     <div class="infoboxDiv3">
-      <Infoboks title="Lomografi">
+      <div title="Lomografi">
+        <h3 class="dropdown-header">{title}</h3>
         <p class="orange">
           Et lomografi er egentlig bare et fotografi skudt uden videre
           omtankte, og med noget foto-udstyr af ret alternativ
@@ -40,10 +42,8 @@ const {infotekst} = Astro.props;
           anti-fotograf-agtigt. men en del foto-entusiaster dyrker den
           slags, og ser det som en foto-genre eller endda en livsstil.
         </p>
-      </Infoboks>
+      </div>
     </div>
-  </section>
-</div>
 
 
 <div class="grid_1-1">
