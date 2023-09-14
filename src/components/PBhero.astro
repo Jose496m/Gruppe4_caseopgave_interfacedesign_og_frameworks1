@@ -1,0 +1,111 @@
+---
+import { Image } from "astro:assets";
+import pierresBer from "../assets/images/pierre.webp";
+---
+
+<section class="afsnit">
+  <Image class="billedet" src={pierresBer} alt="afsnit Pierres Berømmelse" />
+  <h2 class="overskrift1">Pierres Berømmelse</h2>
+</section>
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to(".billedet", {
+    duration: 5,
+    scrollTrigger: {
+      trigger: ".billedet",
+      pin: true,
+      //markers: true,
+    },
+  });
+  gsap.from(".overskrift1", {
+    scrollTrigger: {
+      trigger: ".overskrift1",
+      start: "start bottom ",
+      end: "top center",
+      //markers: true,
+    },
+    y: 300,
+    scale: 1,
+    duration: 1,
+  });
+</script>
+<style>
+  .overskrift1 {
+    color: #fca21b;
+    font-size: 7rem;
+    font-family: "Rubik Glitch", cursive;
+    animation: flicker-3 2.5s linear infinite both;
+  }
+  .overskrift1,
+  .billedet {
+    grid-area: 1/1;
+  }
+  .afsnit {
+    display: grid;
+  }
+
+  @keyframes flicker-3 {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    32.98% {
+      opacity: 1;
+    }
+    33% {
+      opacity: 0;
+    }
+    34% {
+      opacity: 0;
+    }
+    34.02% {
+      opacity: 1;
+    }
+    34.98% {
+      opacity: 1;
+    }
+    35% {
+      opacity: 0;
+    }
+    35.9% {
+      opacity: 0;
+    }
+    35.92% {
+      opacity: 1;
+    }
+    38.98% {
+      opacity: 1;
+    }
+    39% {
+      opacity: 0;
+    }
+    39.8% {
+      opacity: 0;
+    }
+    39.82% {
+      opacity: 1;
+    }
+    83.98% {
+      opacity: 1;
+    }
+    84% {
+      opacity: 0;
+    }
+    84.9% {
+      opacity: 0;
+    }
+    84.92% {
+      opacity: 1;
+    }
+  }
+  /* .overskrift1 {
+    display: block;
+  } */
+  section {
+    display: grid;
+  }
+</style>
