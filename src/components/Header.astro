@@ -25,6 +25,7 @@ const { scroll } = Astro.props;
   import { ScrollTrigger } from "gsap/ScrollTrigger";
 
   gsap.registerPlugin(ScrollTrigger);
+
   gsap.to(".video1", {
     scrollTrigger: {
       trigger: ".video1",
@@ -42,7 +43,7 @@ const { scroll } = Astro.props;
     scrollTrigger: {
       trigger: ".scroll",
       start: "start bottom ",
-      end: "bottom center",
+      end: "top center",
       //markers: true,
     },
     y: 300,
@@ -53,7 +54,7 @@ const { scroll } = Astro.props;
     scrollTrigger: {
       trigger: ".scroll",
       start: "start bottom ",
-      end: "bottom center",
+      end: "top center",
       //markers: true,
     },
     y: 250,
@@ -77,10 +78,8 @@ const { scroll } = Astro.props;
 
   .video-container {
     background-size: cover;
-    background-attachment: fixed; /* Dette er vigtigt for parallax-effekten */
-    height: 100vh; /* Skal udfylde hele skærmen */
-    overflow: hidden; /* Skjul eventuel overflow fra teksten */
-    position: relative;
+
+    height: 100vh;
   }
 
   .text-container {
