@@ -11,7 +11,7 @@ import Stockphoto from "../components/Stockphoto.astro";
 <BaseLayout>
   <main>
     <Header />
-
+<div class="space"></div>
  <Stockphoto/>
     <PierresBereommelse />
     <Skillevej />
@@ -25,6 +25,9 @@ import Stockphoto from "../components/Stockphoto.astro";
 </BaseLayout>
 
 <style>
+  .space{
+    height: 15vw;
+  }
   footer {
     padding: var(--size-10) 0;
     padding-top: var(--size-11);

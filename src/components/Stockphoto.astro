@@ -1,4 +1,6 @@
-<div title="Stock-fotos">
+<div class="stockfoto">
+<div  class="stock">
+    <h3>Stock-fotos</h3>
     <p class="white">
       Stock-fotos er billeder, der kan købes fra et foto-website. De bruges af
       aviser, til markedsføring og som indhold på websites. En licens til at
@@ -18,3 +20,35 @@
       digitaliseret.
     </p>
   </div>
+</div>
+  <style>
+
+    .stockfoto{
+       margin-bottom: 10vw;
+        display: grid;
+        justify-items: center;
+    }
+.stock{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    max-width: 600px;
+    padding: var(--size-6);
+    border: 20px solid transparent;
+    border-image: url(../assets/images/borderLine.png) 5% stretch; 
+  }
+
+
+  </style>
+
+  <script>
+      import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.from(" .stockfoto", {
+    y:300,
+    duration: 2,
+    scrollTrigger: ".stock",
+  });
+  </script>
